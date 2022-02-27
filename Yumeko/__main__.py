@@ -72,38 +72,38 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-YUMEKO_IMG = "https://telegra.ph/file/e0040466048302df1a451.mp4"
+YUMEKO_IMG = "https://telegra.ph/file/b4ccdaedfd2eef81532c9.jpg"
 
 PM_START_TEXT = """
-**Hey I am Yumeko** [ㅤ](https://telegra.ph/file/6643b0fb6792b2e5e844a.mp4)
+**Hello I'm Chrollo** [ㅤ](https://telegra.ph/file/b4ccdaedfd2eef81532c9.jpg)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-**×I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
+**» A Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 ☉ **×Click the button below for more.**
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Yumeko To Your group ➕", url="http://t.me/?startgroup=true"),
+        InlineKeyboardButton(text="➕ Add Chrollo ", url="http://t.me/?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="yumeko_"),
         InlineKeyboardButton(
-            text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/"
+            text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Phantom_Troupes"
         ),
     ],
     [
         
         InlineKeyboardButton(
-            text="❓ Help&Commands", callback_data="help_back"),
+            text="Commands 🕸", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
 **Main commands:**  [ㅤ](https://telegra.ph/file/efdee100cc31b4b3e0be2.mp4)
-❂ /start: Starts me! You've probably already used this.
-❂ /help: Sends this message; I'll tell you more about myself.
+» /start: Starts me! You've probably already used this.
+» /help: Sends this message; I'll tell you more about myself.
 
 All commands can either be used with / or !.
 If you want to report any bugs or need any help with setting up Yumeko, reach us at here"""
@@ -111,7 +111,7 @@ If you want to report any bugs or need any help with setting up Yumeko, reach us
 
 
 DONATE_STRING = """Hehe, baka!!
- [Is that so!!](https://t.me/Ryu_God) ❤️
+ [Is that so!!](https://t.me/freaking_tag) 🎭
 """
 
 IMPORTED = {}
@@ -227,7 +227,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/")]]
+                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Phantom_Troupes")]]
             ),
         )
         
@@ -476,14 +476,14 @@ def yumeko_about_callback(update, context):
         )
     elif query.data == "yumeko_credit":
         query.message.edit_text(
-            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Lᴜɴᴀ Dᴇᴠ's` </b>\n"
-            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ YUMEKO",
+            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Hunter Dᴇᴠ's` </b>\n"
+            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ CHROLLO",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="亗 ʀʏᴜ", url="https://t.me/Ryu_God"),
-                    InlineKeyboardButton(text="Tarun • [ᴀc͜͡ɢᴄ]", url="https://t.me/TheBlackLinen"),
+                    InlineKeyboardButton(text="Freak", url="https://t.me/Freaking_tag"),
+                    InlineKeyboardButton(text="Hunter Committee", url="https://t.me/Hunter_Committee"),
                  ],
                  [
                     InlineKeyboardButton(text="Bot", url="https://t.me/"),
