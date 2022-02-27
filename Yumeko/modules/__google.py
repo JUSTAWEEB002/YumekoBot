@@ -122,8 +122,8 @@ async def okgoogle(img):
 
         if response != 400:
             await dev.edit(
-                "`Image successfully uploaded to Google. Maybe.`"
-                "\n`Parsing source now. Maybe.`"
+                "`Finding data in Hunter Database. Please wait.`"
+                "\n`Parsing source now. wait.`"
             )
         else:
             await dev.edit("`Google told me to fuck off.`")
@@ -267,7 +267,7 @@ async def apk(e):
             + app_link
             + "'>View in Play Store</a>"
         )
-        app_details += "\n\n===> @YumekoProBot <==="
+        app_details += "\n\n===> @Chrollo_Bot <==="
         await e.reply(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
         await e.reply("No result found in search. Please enter **Valid app name**")
