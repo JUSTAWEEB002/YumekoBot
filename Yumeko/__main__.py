@@ -72,14 +72,14 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-YUMEKO_IMG = "https://telegra.ph/file/ff9350715f71a5e26e3b2.mp4"
+YUMEKO_IMG = "https://telegra.ph/file/e8a3e1f076356dbbec369.mp4"
 
 PM_START_TEXT = """
-**Hello I'm Chrollo** [ㅤ](https://telegra.ph/file/ff9350715f71a5e26e3b2.mp4)
+**Hello I'm Chrollo** [ㅤ](https://telegra.ph/file/e8a3e1f076356dbbec369.mp4)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 **» A Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-☉ **»Click the button below for more.**
+ **»Click the button below for more.**
 """
 
 buttons = [
@@ -87,7 +87,7 @@ buttons = [
         InlineKeyboardButton(text="➕ Add Chrollo ", url="http://t.me/?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="About", callback_data="yumeko_"),
+        InlineKeyboardButton(text="About 🕸️", callback_data="yumeko_"),
         InlineKeyboardButton(
             text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Phantom_Troupes"
         ),
@@ -101,7 +101,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-**Main commands:**  [ㅤ](https://telegra.ph/file/efdee100cc31b4b3e0be2.mp4)
+**Main commands:**  [ㅤ](https://telegra.ph/file/e8a3e1f076356dbbec369.mp4)
 » /start: Starts me! You've probably already used this.
 » /help: Sends this message; I'll tell you more about myself.
 
@@ -486,8 +486,8 @@ def yumeko_about_callback(update, context):
                     InlineKeyboardButton(text="Hunter Committee", url="https://t.me/Hunter_Committee"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bot", url="https://t.me/"),
-                    InlineKeyboardButton(text="Support", url="https://t.me/"),
+                    InlineKeyboardButton(text="Bot", url="https://t.me/Chrollo_bot"),
+                    InlineKeyboardButton(text="Support", url="https://t.me/Phantom_Troupes"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp"),
