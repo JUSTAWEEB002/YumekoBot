@@ -72,14 +72,14 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-YUMEKO_IMG = "https://telegra.ph/file/b4ccdaedfd2eef81532c9.jpg"
+YUMEKO_IMG = "https://telegra.ph/file/ff9350715f71a5e26e3b2.mp4"
 
 PM_START_TEXT = """
-**Hello I'm Chrollo** [ㅤ](https://telegra.ph/file/b4ccdaedfd2eef81532c9.jpg)
+**Hello I'm Chrollo** [ㅤ](https://telegra.ph/file/ff9350715f71a5e26e3b2.mp4)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 **» A Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-☉ **×Click the button below for more.**
+☉ **»Click the button below for more.**
 """
 
 buttons = [
