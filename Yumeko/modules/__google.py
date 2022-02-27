@@ -92,7 +92,7 @@ opener.addheaders = [("User-agent", useragent)]
 
 @register(pattern=r"^/pp(?: |$)(\d*)")
 async def okgoogle(img):
-    """ For .reverse command, Google search images and stickers. """
+    """ For .pp command, Google search images and stickers. """
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
     
@@ -105,7 +105,7 @@ async def okgoogle(img):
         return
 
     if photo:
-        dev = await img.reply("`Processing...`")
+        dev = await img.reply("`Searching in Hunter Database...`")
         try:
             image = Image.open(photo)
         except OSError:
