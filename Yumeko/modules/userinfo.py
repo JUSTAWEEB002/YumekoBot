@@ -18,7 +18,7 @@ from Yumeko import (
     BLACKLISTED_HUNTER,
     ZODIAC,
     ZOLDYCK,
-    BOUNTY HUNTER,
+    BOUNTY_HUNTER,
     HUNTER,
     INFOPIC,
     dispatcher,
