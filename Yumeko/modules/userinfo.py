@@ -14,12 +14,12 @@ from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from Yumeko import (
-    TROUPE_MEMBER,
-    BLACKLISTED_HUNTER,
-    ZODIAC,
-    ZOLDYCK,
-    BOUNTY_HUNTER,
-    HUNTER,
+    DEV_USERS,
+    OWNER_ID,
+    DRAGONS,
+    DEMONS,
+    TIGERS,
+    WOLVES,
     INFOPIC,
     dispatcher,
     sw,
@@ -238,10 +238,10 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Searching in Phantom Database...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b> Troupe Information:</b> 」\n"
+        f"╒═══「<b> Appraisal results:</b> 」\n"
         f"ID: <code>{user.id}</code>\n"
         f"First Name: {html.escape(user.first_name)}"
     )
@@ -284,29 +284,29 @@ def info(update: Update, context: CallbackContext):
     except:
         pass  # don't crash if api is down somehow...
 
-    disaster_level_present = True
+    disaster_level_present = False
 
-    if user.id == BLACKLISTED_HUNTER:
-        text += "\n\nThis Spider🕸️ is the head of 'Phantom Troupes'."
+    if user.id == OWNER_ID:
+        text += "\n\nThe Disaster level of this person is 'God'."
         disaster_level_present = True
-    elif user.id in TROUPE_MEMBER:
-        text += "\n\nThis Spider🕸️ is member of 'Phantom Troupes'."
+    elif user.id in DEV_USERS:
+        text += "\n\nThis user is member of 'Hero Association'."
         disaster_level_present = True
-    elif user.id in ZODIAC:
-        text += "\n\nThe Access level of this Spider🕸️ is 'Zodiac'."
+    elif user.id in DRAGONS:
+        text += "\n\nThe Disaster level of this person is 'Dragon'."
         disaster_level_present = True
-    elif user.id in ZOLDYCK:
-        text += "\n\nThe Access level of this Spider🕸️ is 'Zoldyck'."
+    elif user.id in DEMONS:
+        text += "\n\nThe Disaster level of this person is 'Demon'."
         disaster_level_present = True
-    elif user.id in BOUNTY_HUNTER:
-        text += "\n\nThe Access level of this Spider🕸️ is 'Bounty Hunter'."
+    elif user.id in TIGERS:
+        text += "\n\nThe Disaster level of this person is 'Tiger'."
         disaster_level_present = True
-    elif user.id in HUNTER:
-        text += "\n\nThe Access level of this Spider🕸️ is 'Hunter'."
+    elif user.id in WOLVES:
+        text += "\n\nThe Disaster level of this person is 'Wolf'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Troupe_Updates/5">?</a>]'.format(
+        text += ' [<a href="https://t.me/OnePunchUpdates/155">?</a>]'.format(
             bot.username
         )
 
@@ -422,7 +422,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>┎─⌈ Current Troupe stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>┎─⌈ Current Luna stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
@@ -479,7 +479,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust Phantom Troupes to set my bio."
+                "Erm... yeah, I only trust Heroes Association to set my bio."
             )
             return
 
