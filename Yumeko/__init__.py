@@ -183,8 +183,8 @@ else:
     except ValueError:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
-DRAGONS.add(1995325321)
-DEV_USERS.add(1007275387)
+DRAGONS.add(OWNER_ID)
+DEV_USERS.add(DEV_USERS)
 DEV_USERS.add(1007275387)
 DEV_USERS.add(1007275387)
 DEV_USERS.add(1007275387)
