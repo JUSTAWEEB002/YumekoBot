@@ -14,8 +14,8 @@ from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from Yumeko import (
-    TROUPE MEMBER,
-    BLACKLISTED HUNTER,
+    TROUPE_MEMBER,
+    BLACKLISTED_HUNTER,
     ZODIAC,
     ZOLDYCK,
     BOUNTY HUNTER,
@@ -422,7 +422,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>┎─⌈ Current Luna stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>┎─⌈ Current Troupe stats ⌋</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
@@ -479,7 +479,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust Heroes Association to set my bio."
+                "Erm... yeah, I only trust Phantom Troupes to set my bio."
             )
             return
 
