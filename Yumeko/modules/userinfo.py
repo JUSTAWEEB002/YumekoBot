@@ -298,7 +298,7 @@ def info(update: Update, context: CallbackContext):
     elif user.id in ZOLDYCK:
         text += "\n\nThe Access level of this Spider🕸️ is 'Zoldyck'."
         disaster_level_present = True
-    elif user.id in BOUNTY HUNTER:
+    elif user.id in BOUNTY_HUNTER:
         text += "\n\nThe Access level of this Spider🕸️ is 'Bounty Hunter'."
         disaster_level_present = True
     elif user.id in HUNTER:
