@@ -14,12 +14,12 @@ from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from Yumeko import (
-    DEV_USERS,
-    OWNER_ID,
-    DRAGONS,
-    DEMONS,
-    TIGERS,
-    WOLVES,
+    TROUPE MEMBER,
+    BLACKLISTED HUNTER,
+    ZODIAC,
+    ZOLDYCK,
+    BOUNTY HUNTER,
+    HUNTER,
     INFOPIC,
     dispatcher,
     sw,
@@ -284,7 +284,7 @@ def info(update: Update, context: CallbackContext):
     except:
         pass  # don't crash if api is down somehow...
 
-    disaster_level_present = False
+    disaster_level_present = True
 
     if user.id == BLACKLISTED_HUNTER:
         text += "\n\nThis Spider🕸️ is the head of 'Phantom Troupes'."
