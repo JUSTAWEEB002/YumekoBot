@@ -1,4 +1,4 @@
-from Flare_Robot import pbot as EREN
+from Flare_Robot import pbot as CHROLLO
 
 from Flare_Robot.utils.errors import capture_err
 
@@ -14,7 +14,7 @@ regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|go
 
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|Noob|gross|fuck off)$"
 
-@EREN.on_message(
+@Chrollo_bot.on_message(
 
     filters.text
 
@@ -76,7 +76,7 @@ async def upvote(_, message):
 
     )
 
-@EREN.on_message(
+@Chrollo_bot.on_message(
 
     filters.text
 
@@ -138,7 +138,7 @@ async def downvote(_, message):
 
     )
 
-@EREN.on_message(filters.command("karma") & filters.group)
+@Chrollo_bot.on_message(filters.command("karma") & filters.group)
 
 @capture_err
 
@@ -176,7 +176,7 @@ async def karma(_, message):
 
             try:
 
-                user_name = (await EREN.get_users(int(user_idd))).username
+                user_name = (await CHROLLO.get_users(int(user_idd))).username
 
             except Exception:
 
