@@ -238,10 +238,10 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Searching in Phantom Database...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b> Appraisal results:</b> 」\n"
+        f"╒═══「<b> Troupe Information:</b> 」\n"
         f"ID: <code>{user.id}</code>\n"
         f"First Name: {html.escape(user.first_name)}"
     )
@@ -286,27 +286,27 @@ def info(update: Update, context: CallbackContext):
 
     disaster_level_present = False
 
-    if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'God'."
+    if user.id == BLACKLISTED_HUNTER:
+        text += "\n\nThis Spider🕸️ is the head of 'Phantom Troupes'."
         disaster_level_present = True
-    elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Hero Association'."
+    elif user.id in TROUPE_MEMBER:
+        text += "\n\nThis Spider🕸️ is member of 'Phantom Troupes'."
         disaster_level_present = True
-    elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Dragon'."
+    elif user.id in ZODIAC:
+        text += "\n\nThe Access level of this Spider🕸️ is 'Zodiac'."
         disaster_level_present = True
-    elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Demon'."
+    elif user.id in ZOLDYCK:
+        text += "\n\nThe Access level of this Spider🕸️ is 'Zoldyck'."
         disaster_level_present = True
-    elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Tiger'."
+    elif user.id in BOUNTY HUNTER:
+        text += "\n\nThe Access level of this Spider🕸️ is 'Bounty Hunter'."
         disaster_level_present = True
-    elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Wolf'."
+    elif user.id in HUNTER:
+        text += "\n\nThe Access level of this Spider🕸️ is 'Hunter'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/OnePunchUpdates/155">?</a>]'.format(
+        text += ' [<a href="https://t.me/Troupe_Updates/5">?</a>]'.format(
             bot.username
         )
 
